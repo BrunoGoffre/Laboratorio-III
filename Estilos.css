@@ -1,0 +1,64 @@
+/* .botones{
+    background-color: rgb(219, 51, 39);
+    border:none;
+    border-radius: 5px;
+    color:white;
+    padding-left: 5px 15px;
+    margin: 8px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botones:hover{
+    background-color: black;
+    color: red;
+    transition-duration: 0.3s;
+} */
+.labels{
+   margin: 5px 20px ;
+   padding-top: 50px;
+}
+
+div.inputs{
+    background-color:  rgb(245, 241, 241);
+    border-radius: 5px;
+}
+.textos{
+    width: 800px;
+    height:40px;
+    border-color:  rgba(238, 235, 235, 0.938);
+    border-radius: 5px;
+    padding-left: 10px 15px;
+    
+    margin: 10px 20px ;
+}
+.btnGuardar{
+    background-color: rgb(65, 148, 26);
+    border:none;
+    border-radius: 5px;
+    color:white;
+    padding-left: 15px 15px;
+    margin: 15px 0px ;
+    font-size: 15px;
+    cursor: pointer;
+    width: 410px;
+    height: 50px;
+    margin: 30px 20px ;
+}
+.btnGuardar:hover{
+    background-color:rgb(64, 241, 48);
+    color: white;
+    transition-duration: 0.1s;
+} 
+th {
+    background-color: teal;
+    border-color: black;
+    width: 300px;
+    height: 35px;
+    text-align: left;
+    color: white;
+    margin: 10px;
+}
+.filasYColumnas{
+    background-color: rgba(238, 235, 235, 0.938);
+}
