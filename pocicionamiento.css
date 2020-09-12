@@ -1,0 +1,30 @@
+#main{
+    margin: auto; /*centra el elemento o los (para que se mueva el div tiene que ser mas
+                     chico de los normal sino no se va a mover para ningun lado) */
+}
+.fancy{
+    box-sizing: border-box; /*encuadra el elemento en la caja que lo contiene. se debe tener en cuenta la version de el navegador*/
+    padding: 50px; /* genera espacio al rededor de el elemento*/
+}
+.static{
+    position: static; /*el elemento esta estatico sin niguna particularodad*/
+}
+.relative{
+    position: relative; /*se mueve relativamente sobre otro elemento con la propiedad relative y se mueven relativo al de arriba*/
+    top: 10px;          
+    left: 10px; /*con estas propiedades indicamos cuanto queremos que se mueva con relacion al otro elemento*/
+    right: 10px;
+}
+.relativePadre{
+    position: relative;
+    width: 500px;
+}
+.absolut{
+    position: absolute; /* Este elemento se muevo dentro de el relative y no puede salir a menos que le pongamos valores negativos*/
+                        /* la relacion se da porque el absolute esta adentro de el div de el relative*/
+}
+.fixed{
+    position: fixed; /*ancla el elemento a la ventana que ve el usuario, por mas que se haga scrool el elemento siempre estaba visible*/
+    bottom: 25%;
+    right: 10px;
+}
