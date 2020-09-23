@@ -19,14 +19,12 @@ function Mostrar(){
         alert("Inicio de sesion existoso");
     }
 }
-
 function Enter(e){    
         if (e.keyCode == 13)
         {	
             Validar();
         }    
 }
-
 function AgregarProducto(e)
 {
 	var nombre = document.getElementById("nombre");
@@ -46,7 +44,9 @@ function AgregarProducto(e)
         nombre.className="inputSinError";
     }
 
-    tcuerpo.innerHTML += "<tr><td>" + nombre.value + "</td><td>" + apellido.value + "</td></tr>"
+    Peticiones(nombre.value,apellido.value);
+
+    //tcuerpo.innerHTML += "<tr><td>" + nombre.value + "</td><td>" + apellido.value + "</td></tr>"
 
 
 	// var tr = document.createElement("tr");
@@ -73,5 +73,24 @@ function AgregarProducto(e)
     // tdbtn.appendChild(nodeBtn);
     // tr.appendChild(tdbtn);
 
-	tCuerpo.appendChild(tr);
+	//tCuerpo.appendChild(tr);
+}
+function Peticiones(usuario,contraseña){
+    var peticionHttp = new XMLHttpRequest();
+    url="http://localhost:3000/loginUsuario?"+"usr="+usuario+"&"+"pass="+contraseña;
+
+    peticionHttp.onreadystatechange = callback;
+    peticionHttp.open("GET",url,true);
+    peticionHttp.send();
+    console.log("termino")
+    function callback(){
+        if(peticionHttp.readyState===4 && peticionHttp.status===200){
+            if(peticionHttp.responseText=="true"){
+                window.location.assign("D:\Facultad\Laboratorio-III\Login\InicioExitoso.html");
+            }else
+            {
+                alert("Te equivocaste pa");
+            }
+        }
+    }
 }
